@@ -23,7 +23,7 @@ docker build -t juliasci \
 cd <PREFERRED_DIRECTORY>
 ```
 
-3. Run as background (for VSCode)
+4. Run as background (for VSCode)
 ```shell
 docker run --net=host -itd \
 --mount "type=bind,src=$(pwd),dst=/home/rakhan" \
@@ -32,10 +32,10 @@ docker run --net=host -itd \
 --name julia_sci juliasci bash
 ```
 
-4. Open VSCode
+5. Open VSCode
 
-5. Click "Open a Remote Window" (You can find it at left-bottom)
+6. Click "Open a Remote Window" (You can find it at left-bottom)
 
-6. Select "Attach to Running Container"
+7. Select "Attach to Running Container"
 
-7. Select `julia_sci`
+8. Select `julia_sci`
