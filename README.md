@@ -34,7 +34,7 @@ docker run --net=host -itd \
 
 4. Open VSCode
 
-5. Click "Open a Remote Window" (You can find it left-bottom)
+5. Click "Open a Remote Window" (You can find it at left-bottom)
 
 6. Select "Attach to Running Container"
 
