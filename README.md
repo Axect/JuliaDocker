@@ -1,41 +1,34 @@
-# JuliaSci
+# JuliaDocker
 
 ## Usage
 
 1. Clone this repository
 ```shell
-git clone https://github.com/Axect/JuliaSci
+git clone https://github.com/Axect/JuliaDocker
 
 # or
 
-git clone git@github.com:Axect/JuliaSci.git
+git clone git@github.com:Axect/JuliaDocker.git
 ```
 
 2. Build
 ```shell
-docker build -t juliasci \
---build-arg USER_ID=$(id -u) \
---build-arg GROUP_ID=$(id -g) .
+sh build.sh
 ```
 
-3. Move to preferred directory
+3. Run as background (for VSCode)
 ```shell
-cd <PREFERRED_DIRECTORY>
+# Once at first
+sh run.sh <ABSOLUTE_PATH_OF_PREFERRED_DIRECTORY>
+
+# Everytime after first run
+docker start julia_sci
 ```
 
-4. Run as background (for VSCode)
-```shell
-docker run --net=host -itd \
---mount "type=bind,src=$(pwd),dst=/home/quokka" \
---workdir /home/quokka
---user quokka
---name julia_sci juliasci bash
-```
+4. Open VSCode
 
-5. Open VSCode
+5. Click "Open a Remote Window" (You can find it at left-bottom)
 
-6. Click "Open a Remote Window" (You can find it at left-bottom)
+6. Select "Attach to Running Container"
 
-7. Select "Attach to Running Container"
-
-8. Select `julia_sci`
+7. Select `julia_sci`

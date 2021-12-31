@@ -36,6 +36,7 @@ RUN sudo apt install -y \
     unzip \
     wget \
     zlib1g-dev \
+    libedit-dev libncurses5-dev libnetcdf-dev \
     htop
 
 # ==============================================================================
