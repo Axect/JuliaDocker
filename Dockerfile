@@ -9,10 +9,10 @@ LABEL version="0.1"
 ARG USER_ID
 ARG GROUP_ID
 
-RUN addgroup --gid $GROUP_ID rakhan
-RUN adduser --disabled-password --gecos '' --uid $USER_ID --gid $GROUP_ID rakhan
+RUN addgroup --gid $GROUP_ID quokka
+RUN adduser --disabled-password --gecos '' --uid $USER_ID --gid $GROUP_ID quokka
 RUN apt update && apt install -y sudo
-RUN echo 'rakhan ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
+RUN echo 'quokka ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 
 # ==============================================================================
 # Build Essential
@@ -41,6 +41,6 @@ RUN sudo apt install -y \
 # ==============================================================================
 # Install Julia packages
 # ==============================================================================
-COPY script.jl /home/rakhan/script.jl
-WORKDIR /home/rakhan
+COPY script.jl /home/quokka/script.jl
+WORKDIR /home/quokka
 RUN julia script.jl

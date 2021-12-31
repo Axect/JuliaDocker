@@ -26,9 +26,9 @@ cd <PREFERRED_DIRECTORY>
 4. Run as background (for VSCode)
 ```shell
 docker run --net=host -itd \
---mount "type=bind,src=$(pwd),dst=/home/rakhan" \
---workdir /home/rakhan
---user rakhan
+--mount "type=bind,src=$(pwd),dst=/home/quokka" \
+--workdir /home/quokka
+--user quokka
 --name julia_sci juliasci bash
 ```
 
