@@ -42,7 +42,5 @@ RUN sudo apt install -y \
 # ==============================================================================
 # Install Julia packages
 # ==============================================================================
-COPY script.jl /home/quokka/script.jl
 WORKDIR /home/quokka
 USER quokka
-RUN julia script.jl
